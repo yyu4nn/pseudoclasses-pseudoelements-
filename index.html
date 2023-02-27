@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/icon.ico" type="image/x-icon">
+    <title>Pseudo-classes & Pseudo-elements - CSS | yüan</title>
+  </head>
+  <body>
+
+    <header class="row">
+        <article class="col-xl-12 col-md-12 col-sm-12 header">
+            <h1 id="psc4">PSEUDO-CLASSES & PSEUDO-ELEMENTS CSS</h1>
+        </article>
+    </header>
+    
+    <br>
+    
+    <!-- ACA VA LA PARTE DE LA INTRODUCCIÓN -->
+
+    <div class="row"> 
+      <article class="col-xl-6 pcimg1 col-md-12 col-xs-12">
+      </article>
+        <article class="col-xl-6 col-md-12 col-xs-12 pc1">
+            <h1 class="txt1">¿Que es una <a href="#psc1" > Pseudo-class </a> ?</h1>
+            <br>
+            <p>Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.</p>
+            <p>Al igual tambien existen <a href="#psc3">Sub-classes</a></p>
+
+            <h1 class="txt1">¿Que es un <a href="#psc2"> Pseudo-element </a> ?</h1>
+            <br>
+            <p>Al igual que las pseudo-classes, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un estado especial sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento ::first-line selecciona solo la primera línea del elemento especificado por el selector.</p>
+          </article>
+    </div>
+
+    <p><br></p>
+    <p><br></p>
+
+    <div class="row">
+      <article class="col-xl-12 pc2 col-md-12 col-xs-12">
+        <h1 id="psc1">PSEUDOCLASSES</h1>
+      </article>
+    </div>
+
+    <p><br></p>     
+
+    <div class="container">
+
+      <aside class="row ">   <!-- PRIMERA FILA DE PSEUDOCLASSES -->
+
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:active</h1>
+          <p>Representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta.</p>
+          <a class="active" href="https://www.youtube.com/watch?v=jakpo7tj7Qw&ab_channel=EpitaphRecords">Button</a>
+        </div>
+
+
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:checked</h1>
+          <p>Representa cualquier radio (<input type="radio">), checkbox (<input type="checkbox">) u option</p>
+            <div>
+              <input type="radio" name="my-input" id="yes">
+              <label for="yes">When haces</label>
+                  
+              <input type="radio" name="my-input" id="no">
+              <label for="no">Tus momos</label>
+            </div>
+                  
+            <div>
+              <input type="checkbox" name="my-checkbox" id="opt-in">
+              <label for="opt-in">En codigo</label>
+            </div>
+            
+            
+            <select name="my-select" id="fruit">
+              <option value="opt1">El futuro</option>
+              <option value="opt2">es hoy</option>
+              <option value="opt3">¿Oiste viejo?</option>
+            </select>
+        </div>
+
+
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:default</h1>
+          <p>Representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.</p>
+
+          <input type="radio" name="season" id="spring">
+          <label for="spring">Color de la Manzana</label>
+            
+          <br>
+
+          <input type="radio" name="season" id="summer" checked>
+          <label for="summer">Color de la Aguapanela</label>
+
+          <br>
+
+          <input type="radio" name="season" id="fall">
+          <label for="fall">Color de la Pera</label>
+
+          <br>
+          
+          <input type="radio" name="season" id="winter">
+          <label for="winter">Color de la Piña</label>
+
+        </div>
+
+      </aside>
+
+
+      <p><br></p>
+      <p><br></p>
+
+
+
+
+      <aside class="row">   <!-- SEGUNDA FILA DE PSEUDOCLASSES -->
+
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:dir <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Coincide con los elementos en función de la direccionalidad del texto contenido en ellos.</p>
+            <div dir="rtl">
+              <span>test1</span>
+                <div dir="ltr">test2
+                  <div dir="auto"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:disabled</h1>
+          <p>Representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada).
+            <form action="#">
+              <fieldset id="shipping">
+                <legend>Dirección de Envío</legend>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Dirección">
+                <input type="text" placeholder="Código postal">
+              </fieldset>
+              <br>
+              <fieldset id="billing">
+                <legend>Dirección de facturación</legend>
+                <label for="billing_is_shipping">Igual que la dirección de envío:</label>
+                <input type="checkbox" id="billing-checkbox" checked>
+                <br>
+                <input type="text" placeholder="Victor le dice a Joel" disabled>
+                <input type="text" placeholder="Montate en mi motora" disabled>
+                <input type="text" placeholder="Pero de momento Joel le dice a Victor" disabled>
+              </fieldset>
+            </form>
+        </div>
+        
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:empty</h1>
+          <p>Representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco).</p>
+          <p>Los elementos :empty son señalados en color crema.</p>
+            <div class="boxmayor">
+              <div class="box"></div>
+              <div class="box"> QUE <br>¿MI HIJO ES NEGRO?</div>
+              <div class="box"></div>
+            </div>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- TERCERA FILA DE PSEUDOCLASSES -->
+
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:enabled</h1> 
+          <p>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.).</p>
+            <form action="url_of_form">
+              <label for="FirstField">Primer campo (habilitado):</label>
+              <input type="text" id="FirstField" value=""><br>
+              <br>
+              <label for="SecondField">Segundo campo (deshabilitado):</label>
+              <input type="text" id="SecondField" value="Yo cuando:" disabled="disabled"><br>
+              <br>
+              <input type="button" value="Enviar">
+            </form>
+        </div>
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:first</h1>
+          <p>Utilizada con la regla-at @page, representa la primera página de un documento impreso.</p>
+          <p>Primera página.</p>
+          <p>Segunda página.</p>
+          <button>Imprimir!</button>
+        </div>
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:first-child</h1>
+          <p>Representa el primer elemento entre un grupo de elementos hermanos.</p>
+          <br>
+            <div>
+              <p>¡Este texto está seleccionado!</p>
+              <p>Este texto no está seleccionado.</p>
+            </div>
+                
+            <div>
+              <h5>Este texto no está seleccionado: no es un "p".</h5>
+              <p>Este texto no está seleccionado.</p>
+            </div>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- CUARTA FILA DE PSEUDOCLASSES -->
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:first-of-type</h1> 
+          <p>Representa el primer elemento de su tipo entre un grupo de elementos hermanos.</p>
+            <article class="art1">
+              <div>!Este `div` es primero!</div>
+              <div>¡Este <span>`span` anidado es el primero</span>!</div>
+              <div>¡Este <em>`em` anidado es el primero</em>, pero este <em>`em` anidado es el último</em>!</div>
+              <div>¡Este <span>`span` anidado tiene estilo</span>!</div>
+              <b>¡Este `b` califica!</b>
+              <div>Este es el `div` final.</div>
+            </article>
+        </div>
+            
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:fullscreen <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Representa un elemento que se muestra cuando el navegador está en modo de pantalla completa.</p>
+            <div id="fullscreen">
+              Este texto se pondrá grande y rojo cuando el navegador esté en modo de pantalla completa.
+              <section><br></section>
+              <button id="fullscreen-button">Entrar en pantalla completa</button>
+            </div>
+        </div>
+            
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:hover</h1>
+          <p>Coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).</p>
+          <a href="https://twitter.com/MomosBot4000/status/1629842094507319297?s=20">Intenta pasar el mouse sobre este enlace.</a>
+          <section><br></section>
+          <p>De preferencia <br> no abrir</p>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- QUINTA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:indeterminate</h1> 
+          <p>Representa cualquier elemento de formulario cuyo estado sea indeterminado.</p>
+            <div>
+              <input type="checkbox" id="checkbox">
+                <label for="checkbox">Esta etiqueta comienza con el color lima.</label>
+            </div>
+            <div>
+              <input type="radio" id="radio">
+              <label for="radio">Esta etiqueta comienza con el color lima.</label>
+            </div>
+            <br>
+            <progress></progress>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:in-range</h1>
+          <p>Representa un elemento "input" cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.</p>
+          <form action="" id="form1">
+            <ul>Los valores entre 1 y 10 son válidos.
+              <li>
+                <input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+                <label for="value1">Tu valor esta </label>
+              </li>
+            </ul>
+          </form>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:invalid</h1>
+          <p>Representa cualquier elemento "input" u otro elemento "form" cuyos contenidos no se puedan validar.</p>
+          <form class="frm1">
+            <label class="lbl1" for="url_input">Ingresa una URL:</label>
+            <input class="inp1" type="url" id="url_input" />
+            <br />
+            <br />
+            <label class="lbl1" for="email_input">Introduzca una dirección de correo electrónico:</label>
+            <input class="inp1" type="email" id="email_input" required/>
+          </form>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- SEXTA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:lang()</h1> 
+          <p>Es utilizada para modificar elementos en función del idioma en el que se determina que están.</p>
+          
+          <div lang="en"><q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q></div>
+          <div lang="fr"><q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q></div>
+          <div lang="de"><q>Esta cita en aleman tiene una cita, <q>anidada</q> adentro. @biyin c:</q></div>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:last-child</h1>
+          <p>Representa el último elemento entre un grupo de elementos hermanos.</p>
+          <div>
+            <p class="plc">Este texto no está seleccionado.</p>
+            <p class="plc">¡Este texto está seleccionado!</p>
+          </div>
+          
+          <div>
+            <p class="plc">when no me seleccionan.</p>
+            <h4>Este texto no está seleccionado: no es un `p`.</h4>
+          </div>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:last-of-type</h1>
+          <p class="plot">Representa el último elemento de su tipo entre un grupo de elementos hermanos.</p>
+          <h3>Título</h3>
+          <p class="plot">Párrafo 1</p>
+          <p class="plot">Párrafo 2</p>
+        </div>
+      </aside>
+      
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- SEPTIMA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:left</h1> 
+          <p>Utilizada con la regla @page at, representa todas las páginas de la izquierda de un documento impreso.</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:link</h1>
+          <p>representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado "a", "area", o "link" que tiene un atributo href.</p>
+          <a href="https://signup.leagueoflegends.com/es-mx/signup/index?gclid=Cj0KCQiAo-yfBhD_ARIsANr56g4h0MhwwEhOGtAvCTH0xgxIWyILTjADnb9CoGHdhx-ACS8PAuVzeIAaAgskEALw_wcB&gclsrc=aw.ds#/">Este es un enlace ordinario.</a><br>
+          <a href="https://www.youtube.com/watch?v=-dsy2p2QZDk&ab_channel=DalasReview">Ya has visitado este enlace.</a><br>
+          <a>Enlace de marcador de posición (no se personalizará)</a>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:nth-child</h1>
+          <p class="plot">Coincide con uno o más elementos en función de su posición entre un grupo de hermanos.</p>
+
+            <h3><code>span:nth-child(2n+1)</code>, SIN un
+            <code>&lt;em&gt;</code> entre los hijos.</h3>
+            <p>Los hijos 1, 3, 5 y 7 son seleccionados.</p>
+              <div class="first">
+                <span>Span 1!</span>
+                <span>Span 2</span>
+                <span>Span 3!</span>
+                <span>Span 4</span>
+                <span>Span 5!</span>
+                <span>Span 6</span>
+                <span>Span 7!</span>
+              </div>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- OCTAVA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:nth-last-child</h1> 
+          <p>Selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.</p>
+          <div class="boxmayor">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Primera línea</td>
+                </tr>
+                <tr>
+                  <td>Segunda línea</td>
+                </tr>
+                <tr>
+                  <td>Tercera línea</td>
+                </tr>
+                <tr>
+                  <td>Cuarta línea</td>
+                </tr>
+                <tr>
+                  <td>Quinta línea</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:nth-last-of-type()</h1>
+          <p>Coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.</p>
+          <div>
+            <span>Este es un span.</span>
+            <span>Este es otro span (repoio).</span>
+            <em>Hoy es Jueves de momos.</em>
+            <span>¡Guauu, este span se pone color lima!</span>
+            <strike>Nooo biyin no publiques esos tweets.</strike>
+            <span>Aquí hay un último span.</span>
+          </div>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:nth-of-type</h1>
+          <p>Selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.</p>
+
+            <div>
+              <div>Este elemento no se cuenta.</div>
+              <p class="pot">1er párrafo.</p>
+              <p class="pot">2do párrafo.</p>
+              <div>Este elemento no se cuenta.</div>
+              <p class="pot">3er párrafo.</p>
+              <p class="pot">4to párrafo.</p>
+            </div>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- NOVENA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:only-child</h1> 
+          <p>Representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o :nth-child(1):nth-last-child(1), pero con una especificidad menor.</p>
+          <main>
+            <div>
+              <i>Soy un hijo único y solitario.</i>
+            </div>
+          
+            <div>
+              <i>Yo tengo hermanos.</i><br>
+              <b>¡Yo también!</b><br>
+              <span>Yo también tengo hermanos, <span>pero este es un hijo único.</span></span>
+            </div>
+          </main>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:only-of-type</h1>
+          <p>Representa un elemento que no tiene hermanos del mismo tipo.</p>
+          <main>
+            <div>Soy un `div` #1.</div>
+            <p>Yo soy el único `p` entre mis hermanos.</p>
+            <div>Soy un `div` #2.</div>
+            <div>Soy un `div` #3.
+              <i>Yo soy el único hijo `i`.</i>
+              <em>Soy un `em` #1.</em>
+              <em>Soy un `em` #2.</em>
+            </div>
+          </main>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:optional</h1>
+          <p>Representa cualquier elemento "input", "select", o "textarea" que no tenga el atributo required establecido en él.</p>
+          <p>Esta pseudo-clase es útil para diseñar campos que no son necesarios para enviar un formulario.</p>
+          <p>Ver <a href="#">:invalid</a> para un ejemplo</p>
+            
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- DECIMA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:out-of-range</h1> 
+          <p>Representa un elemento "input" cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max.</p>
+          <form action="" id="form1">
+            <ul>Los valores entre 1 y 10 son válidos.
+              <li>
+                <input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+                <label for="value1">Tu valor esta </label>
+              </li>
+            </ul>
+          </form>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:read-only</h1>
+          <p>Representa un elemento que ya no es editable por el usuario (como un input).</p>
+          <input class="inpro" type="text" value="Aquí puedes poner lo que quieras.">
+          <input class="inpro" type="text" value="Campo de solo lectura." readonly>
+          <p class="pro">Este es un párrafo normal.</p>
+          <p class="pro" contenteditable="true">Puedes editar este párrafo, ¡inténtalo!</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:read-write</h1>
+          <p>Representa un elemento (como un input) que es editable por el usuario.</p>
+          <input type="text" value="Escribe lo que quieras aquí.">
+          <input type="text" value="Este es un campo de solo lectura." readonly>
+          <p>Este es un párrafo normal.</p>
+          <p contenteditable="true">¡Puedes editar este párrafo!</p>   
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- ONCEAVA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:required</h1> 
+          <p>Representa cualquier elemento "input", "select", o "textarea" que tenga el atributo required establecido en él.</p>
+          <p>Esta pseudo-clase es útil para resaltar campos que deben tener datos válidos antes de que se pueda enviar un formulario.</p>
+          <p>Ver <a href="#">:invalid</a> para un ejemplo</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:right</h1>
+          <p>Utilizada con la regla-at @page, representa todas las páginas de la derecha de un documento impreso.</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:root</h1>
+          <p>Selecciona el elemento raíz de un árbol que representa el documento. En HTML, :root representa el elemento "html" y es idéntico al selector html, excepto que su especificidad es mayor.</p>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row">   <!-- DUODECIMA FILA DE PSEUDOCLASSES -->
+          
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:target</h1> 
+          <p>Representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.</p>
+          <h3>Tabla de contenido</h3>
+          <ol>
+            <li><a href="#p1">¡Salta al primer párrafo!</a></li>
+            <li><a href="#p2">¡Salta al segundo párrafo!</a></li>
+            <li><a href="#nowhere">Este enlace no va a ninguna parte,
+              porque el objetivo no existe.</a></li>
+          </ol>
+          <h3>Mi artículo divertido</h3>
+          <p id="p1">Puede orientar elegir como blanco <i>este párrafo</i> utilizando un
+            fragmento de URL. ¡Haz clic en el enlace de arriba para probar!</p>
+          <p id="p2">Este es <i>otro párrafo</i>, también accesible
+            desde los enlaces de arriba. ¿No es encantador?</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1>:valid</h1>
+          <p>Representa cualquier elemento "input" u otro elemento "form"cuyo contenido se valide satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.</p>
+          <p>Esta pseudo-clase es útil para resaltar los campos correctos para el usuario.</p>
+          <p>Ver <a href="#">:invalid</a> para un ejemplo</p>
+        </div>
+              
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">:visited</h1>
+          <p>Representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.</p>
+          <a class="av" href="https://twitter.com/sayorijoestar/status/1629986951053885441">¿Ya has visitado este enlace?</a><br>
+          <a class="av" href="https://twitter.com/Razorkismo/status/1629850314613592064">Ya has visitado este enlace.</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <p><br></p>
+
+
+
+
+
+      <!-- ACA EMPIEZAN LAS PSEUDOCLASSES -->
+
+    <div class="row">
+      <article class="col-xl-12 col-md-12 col-xs-12 pc2">
+        <h1 id="psc3">PSEUDO-SUBCLASSES</h1>
+        <h4>Algunas de las que funcionan</h4>
+      </article>
+    </div>
+
+    <p><br></p>
+
+    <div class="container">
+
+      <aside class="row ">   <!-- PRIMERA FILA DE SUBCLASSES -->
+  
+        <div class="col-xl-3 col-md-6 col-xs-12 col-md-6 col-xs-12">
+          <h1 class="txt2">:any-link <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Representa a un elemento que actúa como el ancla origen de un hipervínculo independientemente de si ha sido visitado, es decir, coincide con cualquier elemento "a", "area" o "link" con un atributo href. Por lo tanto, coincide con todos los elementos que coincidan con :link o :visited.</p>
+          <a class="aal" href="https://example.com">Enlace externo</a><br>
+          <a class="aal" href="#">Enlace de destino interno</a><br>
+          <a class="aal">Enlace de marcador de posición (no se personalizará)</a>
+        </div>
+  
+  
+        <div class="col-xl-3 col-md-6 col-xs-12 col-md-6 col-xs-12">
+          <h1 class="txt2">:current</h1>
+          <p>Es una pseudoclase temporal dimensional que representa un elemento o el antepasado de un elemento que se está mostrando actualmente. Por ejemplo, esta pseudoclase se puede utilizar para representar un vídeo que WebVTT muestra con subtítulos.</p>
+          <video width="300" height="200" controls preload="metadata">
+            <source src="/images/xdxdxd.mp4" type="video/mp4" />
+            <source src="/images/xdxdxd.mp4" type="video/webm" />
+            <track
+              label="English"
+              kind="subtitles"
+              srclang="en"
+              src="subtitles.vtt"
+              default />
+
+          </video>
+        </div>
+  
+        <div class="col-xl-3 col-md-6 col-xs-12 col-md-6 col-xs-12">
+          <h1 class="txt2">:has</h1>
+          <p> Representa un elemento si alguno de los selectores relativos que se pasan como argumento coincide con al menos un elemento cuando se ancla contra este elemento. Esta pseudoclase presenta una forma de seleccionar un elemento padre o un elemento hermano anterior con respecto a un elemento de referencia tomando una lista de selectores relativos como argumento.</p>
+          <section>
+            <article>
+              <h4>Morning Times</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </article>
+          </section>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12 col-md-6 col-xs-12">
+          <h1 class="txt2">:future</h1>
+          <p>Es una pseudoclase temporal que coincidirá con cualquier elemento que aparezca completamente después de un elemento que coincida con :current. Por ejemplo, en un video con subtítulos que WebVTT está mostrando.</p>
+          <br>
+          <video width="300" height="200" controls preload="metadata">
+            <source src="/images/okay.mp4" type="video/mp4" />
+            <source src="/images/okay.mp4" type="video/webm" />
+            <track
+              label="English"
+              kind="subtitles"
+              srclang="en"
+              src="subtitles.vtt"
+              default />
+          </video>
+        </div>
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row ">   <!-- SEGUNDA FILA DE SUBCLASSES -->
+  
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1>:focus-visible</h1>
+          <p>Se aplica mientras un elemento coincide con la pseudo-clase :focus y el UA (User Agent) determina a través de heurísticas que el foco debe hacerse evidente en el elemento. (Muchos navegadores muestran un "anillo de enfoque" por defecto en este caso).</p>
+          <input value="Default styles" /><br />
+          <button>Default styles</button><br />
+          <input class="focus-only" value=":focus only" /><br />
+          <button class="focus-only">:focus only</button><br />
+          <input class="focus-visible-only" value=":focus-visible only" /><br />
+          <button class="focus-visible-only">:focus-visible only</button>
+        </div>
+    
+    
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:focus-within</h1>
+          <p>Coincide con un elemento si el elemento o cualquiera de sus descendientes están enfocados. En otras palabras, representa un elemento que coincide con la pseudoclase :focus o tiene un descendiente que coincide con . (Esto incluye descendientes en árboles de sombra).:focus</p>
+          <p>Try typing into this form.</p>
+          <form>
+            <label for="given_name">Given Name:</label>
+            <input id="given_name" type="text" />
+            <br />
+            <label for="family_name">Family Name:</label>
+            <input id="family_name" type="text" />
+          </form>
+        </div>
+    
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:local-link</h1>
+          <p> Representa un vínculo al mismo documento. Por lo tanto, un elemento que es el ancla de origen de un hipervínculo cuya URL absoluta de destino coincide con la propia URL del documento del elemento.</p>
+          <a href="#target">This is a link on the current page.</a><br />
+          <a href="https://example.com">This is an external link</a><br />
+        </div>
+  
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:nth-col() <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+            <p>Está diseñada para tablas y cuadrículas. Acepta la notación An+B como la utilizada con el selector :nth-child, usándola para apuntar a cada enésima columna. Los valores pares e impares también son válidos.</p>
+            <div class="boxmayor">
+              <table>
+                <tr>
+                  <td>one</td>
+                  <td>two</td>
+                  <td>three</td>
+                  <td>four</td>
+                </tr>
+                <tr>
+                  <td>one</td>
+                  <td>two</td>
+                  <td>three</td>
+                  <td>four</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+  
+      </aside>
+  
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row ">   <!-- TERCERA FILA DE SUBCLASSES -->
+  
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:nth-last-col() <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Está diseñada para tablas y cuadrículas. Acepta la notación An+B como la utilizada con el selector :nth-secund, usándola para apuntar a cada enésima columna anterior, por lo tanto, contando hacia atrás desde el final del conjunto de columnas. Los valores pares e impares también son válidos.</p>
+          <div class="boxmayor">
+            <table>
+              <tr>
+                <td>one</td>
+                <td>two</td>
+                <td>three</td>
+                <td>four</td>
+              </tr>
+              <tr>
+                <td>one</td>
+                <td>two</td>
+                <td>three</td>
+                <td>four</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+  
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:past <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Es una pseudoclase temporal dimensional que coincidirá con cualquier elemento que aparezca completamente antes de un elemento que coincida con :current. Por ejemplo, en un video con subtítulos que WebVTT está mostrando.</p>
+          <video width="300" height="200" controls preload="metadata">
+            <source src="/images/roblox.mp4" type="video/mp4"  />
+            <source src="/images/roblox.mp4" type="video/webm"/>
+            <track
+              label="English"
+              kind="subtitles"
+              srclang="en"
+              src="subtitles.vtt"
+              default />
+          </video>
+        </div>
+  
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:placeholder-shown</h1>
+          <p>Representa cualquier elemento "input" o "textarea" que actualmente muestra texto de marcador de posición.</p>
+          <input placeholder="Buenardo!"/>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">:pinture-in-picture</h1> 
+            <p>Coincide con el elemento que se encuentra actualmente en modo picture-in-picture.</p>
+            <h4>MDN Web Docs Demo: :picture-in-picture pseudo-class</h4>
+            <p>
+              This demo uses the <code>:picture-in-picture</code> pseudo-class to
+              automatically change the style of a video entirely using CSS.
+            </p>
+            <video id="pip-video"></video>
+        </div>
+
+      </aside>
+    </div>
+
+
+      <!-- ACA EMPIEZAN LOS PSEUDO-ELEMENTOS -->
+
+    <div class="row">
+      <article class="col-xl-12 col-md-12 col-xs-12 pc2">
+        <h1 id="psc2">PSEUDO-ELEMENTS</h1>
+      </article>
+    </div>
+      
+    <p><br></p>
+      
+    <div class="container">
+      
+      <aside class="row ">   <!-- PRIMERA FILA DE PSEUDOELEMENTOS -->
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">::after</h1> 
+          <p>Es el último elemento secundario del elemento seleccionado. A menudo se usa para agregar contenido cosmético a un elemento con la propiedad content. Está en línea por defecto.</p>
+          <p class="boring-text">Here is some plain old boring text.</p>
+          <p>Here is some normal text that is neither boring nor exciting.</p>
+          <p class="exciting-text">Contributing to MDN is easy and fun.</p>
+        </div>
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">::before</h1>
+          <p>Es el primer elemento secundario del elemento seleccionado. A menudo se usa para agregar contenido cosmético a un elemento con la propiedad content. Está en línea por defecto.</p>
+          <span class="ribbon">Notice where the orange box is.</span>
+        </div>
+        
+        <div class="col-xl-4 col-md-12 col-xs-12">
+          <h1 class="txt2">::file-selector-button</h1>
+          <p> representa el botón de un "input" de type="file".</p>
+          <form>
+            <label for="fileUpload">Upload file</label>
+            <input type="file" id="fileUpload" />
+          </form>
+        </div>
+
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row ">   <!-- SEGUNDA FILA DE PSEUDOELEMENTOS -->
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::first-letter</h1>
+          <p class="pfl">Aplica estilos a la primera letra de la primera línea de un elemento de nivel de bloque, pero solo cuando no está precedido por otro contenido (como imágenes o tablas en línea).</p>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::first-line</h1>
+          <p>Aplica estilos a la primera línea de un elemento de nivel de bloque.</p>
+          <p class="pffl">
+            Styles will only be applied to the first line of this paragraph. After that,
+            all text will be styled like normal. See what I mean?
+          </p>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::grammar-error <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Representa un segmento de texto que el agente de usuario ha marcado como gramaticalmente incorrecto.</p>
+          <p>My friends is coming to the party tonight.</p>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::highlight <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>Aplica estilos a un resaltado personalizado.
+
+          <p> Un resaltado personalizado es una colección de objetos Range y se registra en una página web mediante HighlightRegistry.</p>
+          <p id="rainbow-text">CSS Custom Highlight API rainbow</p>
+        </div>
+
+      </aside>
+
+      <p><br></p>
+      <p><br></p>
+
+      <aside class="row ">   <!-- TERCERA FILA DE PSEUDOELEMENTOS -->
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::marker</h1>
+          <p>Selecciona el cuadro de marcador de un elemento de lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudoelemento establecido para mostrar: list-item, como los elementos "li" y "summary".</p>
+          <ul>
+            <li class="lm">Peaches</li>
+            <li class="lm">Apples</li>
+            <li class="lm">Plums</li>
+          </ul>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::place-holder</h1>
+          <p>Representa el texto del marcador de posición en un elemento "input" o "textarea".</p>
+          <input placeholder="Type here"/>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1>::selection</h1> 
+          <p>Aplica estilos a la parte de un documento que el usuario ha resaltado (como hacer clic y arrastrar el ratón por el texto).</p>
+          This text has special styles when you highlight it.
+          <p>Also try selecting text in this paragraph.</p>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-xs-12">
+          <h1 class="txt2">::spelling-error <img src="/images/lab.png" width="45vh" height="45vh" title="Experimental: Esta es una tecnología experimental. Comprueba la Tabla de compabilidad de navegadores cuidadosamente antes de usarla en producción."> </h1> 
+          <p>representa un segmento de texto que el agente de usuario ha marcado como mal escrito.</p>
+          <p contenteditable spellcheck="true">
+            My friends are coegdfgfddffbgning to the party tonight.
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div class="row footer">
+      <article class="col-xl-12 col-md-12 col-xs-12 pc2">
+        <h2><a href="#psc4">Inicio <p></p></a><a class="git" href="https://github.com/yyu4nn?tab=repositories">GitHub</a></h2>
+        <h2>Juan Hernández</h2>
+      </article>
+    </div>
+    
+  </body>
+</html>

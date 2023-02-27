@@ -1,0 +1,701 @@
+* { 
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    color: whitesmoke;
+    background-image: url(../images/header.jpg);
+    background-size: 99%;
+    background-repeat: no-repeat;
+
+}
+
+.pc1{
+    padding: 6vh;
+}
+
+
+.pcimg1{
+    
+    background-image: url(../images/2.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 80vh;
+    border-radius: 2vh;
+
+}
+
+.txt1{
+    background-color: black;
+    height: 20%;
+    color: white;
+    border-radius: 2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc2{
+    background-color: black;
+    color: white;
+    border-radius: 2vh;
+}
+
+.txt2{
+    color: black;
+}
+
+.as1{
+    padding: 5vh;
+}
+
+.active{
+    color: green;
+    
+}
+
+
+/* ACTIVE */
+a:active { background: greenyellow; border-radius: 10vh;} 
+
+/* DEFAULT */
+input:default {
+    box-shadow: 0 0 2px 1px coral;
+}
+  
+input:default + label {
+    color: coral;
+}
+
+/* DIR */
+:dir(ltr) {
+    background-color: yellow;
+}
+  
+  :dir(rtl) {
+    background-color: powderblue;
+}
+
+/* DISABLED */
+input[type="text"]:disabled {
+    background: #ccc;
+}
+
+/* EMPTY */
+.boxmayor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    color: white;
+    background: black;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.box:empty {
+    background-color:antiquewhite;
+}
+
+/* ENABLED */
+input:enabled {
+    color: #2b2;
+  }
+  
+  input:disabled {
+    color: #aaa;
+  }
+
+  /* FIRST */
+  @page :first {
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+  
+  p {
+    page-break-after: always;
+  }
+
+  /* FIRST-CHILD */
+  p:first-child {
+    color: white;
+    background-color: black;
+    padding: 5px;
+  }
+
+  /* first-of-type */
+  .art1 :first-of-type {
+    background-color: pink;
+  }
+
+  /* fullscreen */
+  #fullscreen:fullscreen {
+    padding: 42px;
+    background-color: pink;
+    border:2px solid #f00;
+    font-size: 200%;
+  }
+  
+  #fullscreen:fullscreen > h1 {
+    color: red;
+  }
+  
+  #fullscreen:fullscreen > p {
+    color: darkred;
+  }
+  
+  #fullscreen:fullscreen > button {
+    display: none;
+  }
+
+  /* FOCUS */
+  .red-input:focus {
+    background: yellow;
+    color: red;
+  }
+  
+  .blue-input:focus {
+    background: yellow;
+    color: blue;
+  }
+
+  /* HOVER */
+  a {
+    background-color: powderblue;
+    transition: background-color .5s;
+  }
+  
+  a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /* indeterminate */
+  input:indeterminate + label {
+    background: lime;
+  }
+
+  progress {
+    margin: 4px;
+  }
+  
+  progress:indeterminate {
+    opacity: 0.5;
+    background-color: lightgray;
+    box-shadow: 0 0 2px 1px red;
+  }
+
+  /* in-range */
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+  
+  input {
+    border: 1px solid black;
+  }
+  
+  input:in-range {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
+  
+  input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 2px solid red;
+  }
+  
+  input:in-range + label::after {
+    content: 'bien.';
+  }
+  
+  input:out-of-range + label::after {
+    content: 'fuera de rango!';
+  }
+
+/* invalid */
+.inp1 :invalid {
+    background-color: #ffdddd;
+  }
+  
+  .frm1:invalid {
+    border: 5px solid #ffdddd;
+  }
+  
+  .inp1:valid {
+    background-color: #ddffdd;
+  }
+  
+  .frm1:valid {
+    border: 5px solid #ddffdd;
+  }
+  
+  .inp1:required {
+    border-color: #800000;
+    border-width: 3px;
+  }
+  
+  .inp1:required:invalid {
+    border-color: #C00000;
+  }
+
+  /* lang */
+    :lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+    :lang(fr) > q { quotes: '« ' ' »'; }
+    :lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+
+/* last-child */
+.plc:last-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+  }
+
+/* last-of-type */
+.plot:last-of-type {
+    color: red;
+    font-style: italic;
+  }
+
+/* left */
+  @page :left {
+    margin: 2in 3in;
+  }
+
+  /* link */
+  a:link {
+    background-color: gold;
+    color: green;
+  }
+
+/* nth-child */
+html {
+    font-family: sans-serif;
+  }
+  
+  span,
+  div em {
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  
+  .first span:nth-child(2n+1),
+  .second span:nth-child(2n+1),
+  .third span:nth-of-type(2n+1) {
+    background-color: lime;
+  }
+
+/* nth-last-child */
+table {
+    border: 1px solid blue;
+  }
+  
+  /* Selecciona los últimos tres elementos */
+  tr:nth-last-child(-n+3) {
+    background-color: pink;
+  }
+  
+  /* Toma todos los elementos a partir del penúltimo elemento */
+  tr:nth-last-child(n+2) {
+    color: blue;
+  }
+  
+  /* Seleccione solo el penúltimo elemento */
+  tr:nth-last-child(2) {
+    font-weight: 600;
+  }
+
+  /* ntc-last-of-type() */
+  span:nth-last-of-type(2) {
+    background-color: lime;
+  }
+
+  /* Párrafos impares */
+.pot:nth-of-type(2n+1) {
+    color: red;
+  }
+  
+  /* Párrafos pares */
+  .pot:nth-of-type(2n) {
+    color: blue;
+  }
+  
+  /* Primer párrafo */
+  .pot:nth-of-type(1) {
+    font-weight: bold;
+  }
+
+  /* only-child */
+  main :only-child {
+    color: red;
+  }
+
+  /* only-of-type */
+  main :only-of-type {
+    color: red;
+  }
+
+  /* out-of-range */
+
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+  
+  input {
+    border: 1px solid black;
+  }
+  
+  input:in-range {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
+  
+  input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 2px solid red;
+  }
+  
+  input:in-range + label::after {
+    content: 'bien.';
+  }
+  
+  input:out-of-range + label::after {
+    content: '¡fuera de rango!';
+  }
+
+/* read-only */
+.inpro { min-width: 20em; color: black; }
+.inpro:-moz-read-only { background: white; color: black; }
+.inpro:read-only { background: black; color: white; }
+
+.pro:-moz-read-only { background: lightgray; }
+.pro:read-only { background: lightgray; }
+.pro[contenteditable="true"] { color: black; }
+
+/* read-write */
+.inpro { min-width: 20em; }
+.inpro:-moz-read-write { background: white;}
+.inpro:read-write { background: cyan; }
+
+.pro:-moz-read-write { background: lightgray; }
+.pro:read-write { background: lightgray; }
+.pro[contenteditable="true"] { color: blue; }
+
+/* required */
+/* right */
+@page :right {
+    margin: 2in 3in;
+  }
+
+  /* root  */
+  :root {
+    --main-color: hotpink;
+    --pane-padding: 5px 42px;
+  }
+
+  /* target */
+  p:target {
+    background-color: gold;
+  }
+  
+  /* Agrega un pseudo-elemento dentro del elemento de destino */
+  p:target::before {
+    font: 70% sans-serif;
+    content: "►";
+    color: limegreen;
+    margin-right: .25em;
+  }
+  
+  /* Estilo de elementos en cursiva dentro del elemento de destino */
+  p:target i {
+    color: red;
+  }
+
+/* visited */
+.av {
+    /* Especifique los valores predeterminados no transparentes a ciertas propiedades,
+       lo que les permite ser diseñado con el estado :visited */
+    background-color: white;
+    border: 1px solid white;
+  }
+  
+  .av:visited {
+    background-color: yellow;
+    border-color: hotpink;
+    color: hotpink;
+  }
+
+/* ACA EMPIEZAN LAS SUBCLASSES */
+/* ANY-LINK */
+.aal:any-link {
+    border: 1px solid blue;
+    color: orange;
+  }
+  
+  /* navegadores WebKit */
+  .aal:-webkit-any-link {
+    border: 1px solid blue;
+    color: orange;
+  }
+
+/* current */
+:current(p, span) {
+    background-color: yellow;
+  }
+
+/* future */
+:future(p, span) {
+    display: none;
+  }
+
+/* has */
+h1,
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h1:has(+ h2) {
+  margin: 0 0 0.25rem 0;
+}
+
+/* focus-visible */
+input,
+button {
+  margin: 10px;
+}
+
+.focus-only:focus {
+  outline: 2px solid black;
+}
+
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+
+/* focus-within */
+form {
+    border: 1px solid;
+    color: gray;
+    padding: 4px;
+  }
+  
+  form:focus-within {
+    background: #ff8;
+    color: black;
+  }
+  
+  input {
+    margin: 4px;
+  }
+
+/* local-link */
+a:local-link {
+    color: green;
+  }
+
+/* nth-col() */
+td {
+    border: 1px solid #ccc;
+    padding: 0.2em;
+  }
+  
+  /* Odd columns */
+  :nth-col(2n + 1) {
+    background-color: pink;
+  }
+
+/* nth-last-col() */
+td {
+    border: 1px solid #ccc;
+    padding: 0.2em;
+  }
+  
+  /* Odd columns starting with the final column of the table */
+  :nth-last-col(2n + 1) {
+    background-color: pink;
+  }
+
+/* PAST */
+:past(p, span) {
+    display: none;
+  }
+
+/* placeholder-shown */
+
+input {
+    border: 1px solid black;
+    padding: 3px;
+  }
+  
+  input:placeholder-shown {
+    border-color: teal;
+    color: purple;
+    font-style: italic;
+  }
+
+/* picture-in-picture */
+:picture-in-picture {
+    box-shadow: 0 0 0 5px red;
+  }
+
+/* :after */
+.exciting-text::after {
+    content: " <- EXCITING!";
+    color: green;
+  }
+  
+  .boring-text::after {
+    content: " <- BORING";
+    color: red;
+  }
+
+/* before */
+.ribbon {
+    background-color: #5bc8f7;
+  }
+  
+  .ribbon::before {
+    content: "Look at this orange box.";
+    background-color: #ffba10;
+    border-color: black;
+    border-style: dotted;
+  }
+
+/* file-selector-button */
+input[type="file"]::file-selector-button {
+    border: 2px solid #6c5ce7;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: #a29bfe;
+    transition: 1s;
+  }
+  
+  input[type="file"]::-ms-browse:hover {
+    background-color: #81ecec;
+    border: 2px solid #00cec9;
+  }
+  
+  input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #81ecec;
+    border: 2px solid #00cec9;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background-color: #81ecec;
+    border: 2px solid #00cec9;
+  }
+
+/* first-letter */
+.pfl::first-letter {
+    color: red;
+    font-size: 150%;
+  }
+
+/* first-line */
+.pffl::first-line {
+    color: blue;
+    text-transform: uppercase;
+  
+    /* WARNING: DO NOT USE THESE */
+    /* Many properties are invalid in ::first-line pseudo-elements */
+    margin-left: 20px;
+    text-indent: 20px;
+  }
+
+/* grammar-error */
+::grammar-error {
+    text-decoration: underline red;
+    color: red;
+  }
+
+/* highlight */
+
+#rainbow-text {
+    font-family: monospace;
+    font-size: 1.5rem;
+  }
+  
+  ::highlight(rainbow-color-1) {
+    color: #ad26ad;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-2) {
+    color: #5d0a99;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-3) {
+    color: #0000ff;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-4) {
+    color: #07c607;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-5) {
+    color: #b3b308;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-6) {
+    color: #ffa500;
+    text-decoration: underline;
+  }
+  ::highlight(rainbow-color-7) {
+    color: #ff0000;
+    text-decoration: underline;
+  }
+
+  /* marker */
+  .lm::marker {
+    content: '✝ ';
+    font-size: 1.2em;
+}
+
+/* placeholder */
+input::placeholder {
+  color: red;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* selection */
+/* Make selected text gold on a red background */
+::selection {
+  color: gold;
+  background-color: red;
+}
+
+/* Make selected text in a paragraph white on a blue background */
+p::selection {
+  color: white;
+  background-color: blue;
+}
+
+/* spelling-error */
+::spelling-error {
+  text-decoration: wavy red;
+}
+
+.footer{
+  display: flex;
+  justify-content: left;
+  align-items: end;
+}
+
+.mp4-3{
+  width: 30vh;
+  height: 30vh;
+}
